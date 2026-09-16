@@ -31,7 +31,7 @@ export default function Faqs2() {
         <div className="border-t border-white" />
         <div className="flex justify-between items-center mt-4 gap-2 cursor-pointer">
           <p className="text-gray-400 text-sm sm:text-base truncate">
-            yourname@email.com
+            <input type="text" placeholder=" yourname@email.com" className="p-2" />
           </p>
           <MoveRight
             strokeWidth={4}
