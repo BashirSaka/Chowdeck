@@ -1,20 +1,22 @@
 import { Play, MessageSquare, Apple } from "lucide-react";
 import Rider from "./Rider";
+import Imagechow from "../../assets/bg-image.jpeg" 
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center pt-8 pb-32 min-h-[70vh] md:min-h-[60vh] px-6 md:px-16 overflow-hidden">
-      <h1 className="font-bold text-center text-black text-6xl mt-6">
+    <section className="relative flex flex-col items-center pt-8 pb-32 min-h-[70vh] md:min-h-[60vh]  md:overflow-hidden">
+      <img src={Imagechow} className="w-screen h-screen" alt="" />
+      <h1 className="font-bold text-center text-black text-6xl mt-16 md:mt-20 absolute">
         Se o ti jeun?
       </h1>
 
-      <div className="flex gap-4 justify-center items-center mt-8">
+      <div className="flex gap-4 justify-center items-center mt-40 px-4 md:mt-46 absolute">
         <p className="bg-green-800 rounded-md p-4 flex flex-wrap  items-center gap-2 text-white cursor-pointer hover:bg-green-900 transition-colors">
           <Play size={25} className="text-green-400" />
           Download on Google Play
         </p>
         <p className="bg-green-800 rounded-md p-4 flex flex-wrap items-center gap-2 text-white cursor-pointer hover:bg-green-900 transition-colors">
-          <Apple  size={23} className="text-yellow-400" />
+          <Apple size={23} className="text-yellow-400" />
           Download on Apple Store
         </p>
       </div>

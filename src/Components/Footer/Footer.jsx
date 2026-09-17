@@ -13,7 +13,10 @@ import {
 import DrinksIllustration from "./DrinksIllustration";
 import Advertisment from "./Advertisment";
 import Image1 from "../../assets/Image1.png";
-
+import Image3 from "../../assets/Image3.png";
+import AppImage from "../../assets/app-image.png";
+import Pickup from "../../assets/pickup.png";
+import OrderTransit from "../../assets/order-transit.png";
 
 export default function Footer() {
   const [activeCategory, setActiveCategory] = useState(2);
@@ -46,6 +49,10 @@ export default function Footer() {
       text: "24/7 customer support",
     },
   ];
+
+  // Data for the scrolling phone-mockup strip
+  const phoneImages = [Image1, Image3, AppImage, Pickup, OrderTransit];
+
   return (
     <section className="relative bg-[#003c2f] pb-16 md:pb-0 px-4 sm:px-8 flex flex-col items-center">
       {/* Yellow Categories Card — pulled up over the section above via negative margin, not absolute+top */}
@@ -172,25 +179,39 @@ export default function Footer() {
             ))}
           </div>
         </div>
+      </div>
 
-        <style>{`
+      {/* Moving phone-mockup strip */}
+      <div className="pb-40 relative w-full max-w-full min-w-0 overflow-hidden mt-40 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="flex gap-6 w-max animate-marquee-images">
+          {[...phoneImages, ...phoneImages].map((img, i) => (
+            <img
+              key={i}
+              src={img}
+              alt="Chowdeck app screenshot"
+              className="h-64 sm:h-80 md:h-[420px] w-auto rounded-3xl object-cover shrink-0"
+            />
+          ))}
+        </div>
+      </div>
+
+      <style>{`
         @keyframes marquee {
-          from { transform: translateX(0); }
+          from { transform: translateX(10%); }
           to { transform: translateX(-50%); }
         }
         .animate-marquee {
           animation: marquee 25s linear infinite;
         }
-      `}</style>
-      </div>
 
-      <div className="mt-40">
-        <img
-          src={Image1}
-          className="mb-20"
-          alt="Image of multiple view of cutomers"
-        />
-      </div>
+        @keyframes marquee-images {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+        .animate-marquee-images {
+          animation: marquee-images 25s linear infinite;
+        }
+      `}</style>
     </section>
   );
 }
