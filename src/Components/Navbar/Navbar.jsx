@@ -14,7 +14,7 @@ export default function Navbar() {
   };
 
   return (
-    <section className="relative px-6 md:px-16 py-4 flex justify-between items-center cursor-pointer">
+    <section className="sticky top-0 z-50 px-6 md:px-16 py-4 flex justify-between items-center cursor-pointer">
       {/* Logo */}
       <div className="bg-green-800 text-white rounded-3xl py-[5.3px] px-4 flex gap-2 items-center">
         <Truck size={22} color="yellow" />

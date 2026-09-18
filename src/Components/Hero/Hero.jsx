@@ -1,12 +1,16 @@
 import { Play, MessageSquare, Apple } from "lucide-react";
 import Rider from "./Rider";
-import Imagechow from "../../assets/bg-image.jpeg" 
+import Imagechow from "../../assets/bg-image.png";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center pt-8 pb-32 min-h-[70vh] md:min-h-[60vh]  md:overflow-hidden">
-      <img src={Imagechow} className="w-screen h-screen" alt="" />
-      <h1 className="font-bold text-center text-black text-6xl mt-16 md:mt-20 absolute">
+    <section className="relative flex flex-col items-center pb-32 min-h-[70vh] md:min-h-[60vh] md:overflow-hidden">
+      <img
+        src={Imagechow}
+        className="absolute inset-0 w-full h-full object-cover -z-10"
+        alt=""
+      />
+      <h1 className="font-bold text-center text-black text-6xl  md:mt-20 absolute">
         Se o ti jeun?
       </h1>
 
