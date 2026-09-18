@@ -1,13 +1,13 @@
 import { Play, MessageSquare, Apple } from "lucide-react";
 import Rider from "./Rider";
-import Imagechow from "../../assets/bg-image.png"; 
+import Imagechow from "../../assets/download.svg"; 
 
 export default function Hero() {
   return (
     <section className="relative flex flex-col items-center  min-h-[70vh] md:min-h-[60vh]  md:overflow-hidden">
       <img
         src={Imagechow}
-        className="h-screen md:w-full h-full object-cover -z-10"
+        className="w-full h-screen md:w-full h-full object-cover -z-10"
         alt="Image of a city view"
       />
       <h1 className="font-bold text-center text-black text-5xl md:text-6xl mt-10 md:mt-20 absolute">
@@ -27,7 +27,7 @@ export default function Hero() {
 
       <div>
         {/* Bottom-left Delivery Rider Icon (facing left) */}
-        <div className="absolute bottom-2 left-8 md:left-24 lg:left-32 cursor-pointer">
+        <div className="absolute bottom-10 left-8 md:left-24 lg:left-32 cursor-pointer">
           <Rider />
         </div>
 
